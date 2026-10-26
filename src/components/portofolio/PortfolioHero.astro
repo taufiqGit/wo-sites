@@ -1,0 +1,21 @@
+---
+import PageHero from "../shared/PageHero.astro";
+import HeroImage from "../shared/HeroImage.astro";
+---
+
+<PageHero
+    eyebrow="Perayaan pilihan · Pernikahan Nresnani"
+    titleHtml={`Cerita cinta,<br /><i>dirayakan</i> dengan<br />indah.`}
+    body="Setiap pernikahan menyimpan dunianya sendiri — momen yang bermakna, detail yang penuh perhatian, dan kenangan yang tertinggal lama setelah hari itu berlalu."
+    ctaHref="#gallery"
+    ctaLabel="Jelajahi cerita-cerita"
+    ctaIcon="↓"
+>
+    <HeroImage
+        slot="image"
+        image="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=1400&q=85"
+        alt="Pasangan yang baru menikah merayakan di bawah pepohonan"
+        caption="Hari yang bermakna."
+        subcaption="The Garden Estate"
+    />
+</PageHero>

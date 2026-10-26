@@ -1,0 +1,28 @@
+---
+interface Props {
+    image: string;
+    alt: string;
+    caption: string;
+    subcaption: string;
+}
+const { image, alt, caption, subcaption } = Astro.props;
+---
+
+<div class="relative h-[470px] sm:h-[560px] lg:h-[650px]">
+    <div class="absolute -right-12 top-4 h-56 w-56 rounded-full bg-champagne/50 blur-3xl"></div>
+    <div class="absolute right-0 top-0 h-full w-[86%] overflow-hidden rounded-tl-[150px] rounded-br-[28px] shadow-soft">
+        <img
+            src={image}
+            alt={alt}
+            class="h-full w-full object-cover object-center"
+            loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-tr from-[#6c5849]/35 via-transparent to-[#ead6be]/20"></div>
+    </div>
+    <div class="absolute bottom-8 left-0 hidden w-44 rounded-[3px] bg-ivory p-4 shadow-card sm:block">
+        <p class="font-serif text-xl italic">{caption}</p>
+        <p class="mt-2 text-[9px] uppercase tracking-[.18em] text-taupe">
+            {subcaption}
+        </p>
+    </div>
+</div>

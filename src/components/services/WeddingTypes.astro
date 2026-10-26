@@ -1,0 +1,61 @@
+---
+const types = [
+    {
+        icon: "lucide:heart",
+        title: "Perayaan intim",
+        body: "Perjumpaan hangat yang dibentuk di sekitar keluarga dan koneksi yang bermakna.",
+    },
+    {
+        icon: "lucide:sparkles",
+        title: "Klasik & kontemporer",
+        body: "Fondasi abadi dengan sudut pandang yang terasa sepenuhnya milikmu.",
+    },
+    {
+        icon: "lucide:flower-2",
+        title: "Perayaan budaya",
+        body: "Tradisi, upacara, dan adat keluarga yang dijaga dengan penuh hormat.",
+    },
+    {
+        icon: "lucide:calendar-days",
+        title: "Besar & multi-hari",
+        body: "Perayaan berlapis dengan ritme yang mulus di setiap rangkaian acara.",
+    },
+];
+---
+
+<section
+    id="weddings"
+    class="bg-espresso px-8 py-20 text-ivory sm:py-28 lg:px-16"
+>
+    <div class="mx-auto grid max-w-[1120px] gap-16 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+        <div>
+            <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-champagne">
+                Setiap jenis cerita cinta
+            </p>
+            <h2 class="font-serif text-4xl leading-[1.03] sm:text-5xl lg:text-[68px]">
+                Tradisimu.
+                <br />
+                <i>Keindahan versimu.</i>
+            </h2>
+            <p class="mt-8 max-w-[430px] text-sm leading-7 text-ivory/65">
+                Dari upacara intim hingga perayaan multi-hari, setiap pernikahan
+                berhak mendapat perhatian yang penuh perhatian dan penghormatan
+                bagi orang-orang serta tradisi di jantungnya.
+            </p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+            {types.map((type) => (
+                <div class="rounded bg-ivory/10 p-6">
+                    <iconify-icon
+                        icon={type.icon}
+                        class="text-xl text-champagne"
+                    />
+                    <h3 class="mt-8 font-serif text-2xl">{type.title}</h3>
+                    <p class="mt-3 text-sm leading-6 text-ivory/60">
+                        {type.body}
+                    </p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

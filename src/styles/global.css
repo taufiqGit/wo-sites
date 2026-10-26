@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F4EFE7;
+  --color-champagne: #D8C6B2;
+  --color-taupe: #A99B8B;
+  --color-espresso: #42382F;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  --shadow-soft: 0 18px 55px rgba(66, 56, 47, 0.12);
+  --shadow-card: 0 12px 32px rgba(66, 56, 47, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+}

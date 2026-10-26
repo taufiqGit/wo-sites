@@ -1,0 +1,50 @@
+---
+import HeroImage from "./HeroImage.astro";
+
+interface Props {
+    eyebrow: string;
+    titleHtml: string;
+    body: string;
+    ctaHref: string;
+    ctaLabel: string;
+    ctaIcon?: string;
+}
+
+const {
+    eyebrow,
+    titleHtml,
+    body,
+    ctaHref,
+    ctaLabel,
+    ctaIcon = "↗",
+} = Astro.props;
+---
+
+<section class="relative mx-auto grid min-h-[700px] max-w-[1440px] items-center gap-12 px-8 pb-16 pt-36 lg:min-h-[760px] lg:grid-cols-[.85fr_1.15fr] lg:px-16 lg:pb-0 lg:pt-20">
+    <div class="relative z-10">
+        <p class="mb-7 text-[10px] uppercase tracking-[.34em] text-taupe">
+            {eyebrow}
+        </p>
+        <h1
+            class="max-w-[680px] font-serif text-[52px] leading-[.98] tracking-[-.045em] sm:text-7xl lg:text-[88px]"
+            set:html={titleHtml}
+        />
+        <p class="mt-8 max-w-[460px] text-[15px] leading-7 text-espresso/65">
+            {body}
+        </p>
+        <a
+            href={ctaHref}
+            class="mt-9 inline-flex items-center gap-5 rounded-full bg-espresso px-7 py-4 text-[10px] uppercase tracking-[.23em] text-ivory shadow-card transition-all hover:-translate-y-1 hover:bg-[#5b4c40]"
+        >
+            {ctaLabel} <span class="text-base">{ctaIcon}</span>
+        </a>
+    </div>
+    <slot name="image">
+        <HeroImage
+            image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=85"
+            alt="Pasangan yang baru menikah berbagi momen intim di luar ruangan"
+            caption="Penuh makna."
+            subcaption="Sejak 2014"
+        />
+    </slot>
+</section>

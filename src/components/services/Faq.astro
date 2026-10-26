@@ -1,0 +1,49 @@
+---
+const faqs = [
+    {
+        question: "Kapan sebaiknya kita menghubungi wedding planner?",
+        answer: "Semakin awal kamu memulai, semakin besar fleksibilitas yang biasanya kamu miliki untuk venue, vendor, dan keputusan perencanaan. Hubungi kami saat kamu siap membahas visi dan linimasa.",
+    },
+    {
+        question: "Apakah bisa bekerja dengan vendor pilihan kami?",
+        answer: "Kami bisa mendiskusikan tim vendor yang sudah kamu miliki dan cara terbaik mengoordinasikan semua orang di sekitar perayaanmu.",
+    },
+    {
+        question: "Apakah pengalaman perencanaan kami bisa dipersonalisasi?",
+        answer: "Setiap pasangan punya prioritas yang berbeda. Kami akan mendiskusikan kebutuhanmu dan merekomendasikan layanan yang paling cocok untuk perayaanmu.",
+    },
+    {
+        question:
+            "Apakah kalian merencanakan pernikahan tradisional atau budaya?",
+        answer: "Nresnani terbuka untuk berdiskusi tentang tradisi, upacara, dan adat keluarga yang membuat setiap pernikahan bermakna. Pengalaman spesifik dan ketersediaan dapat dikonfirmasi saat konsultasi.",
+    },
+];
+---
+
+<section id="faq" class="mx-auto max-w-[1000px] px-8 py-20 sm:py-32 lg:px-0">
+    <div class="mb-14 text-center">
+        <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-taupe">
+            Beberapa jawaban yang membantu
+        </p>
+        <h2 class="font-serif text-4xl sm:text-5xl lg:text-[68px]">
+            Pertanyaan yang
+            <br />
+            <i>sering diajukan.</i>
+        </h2>
+    </div>
+    <div class="divide-y divide-espresso/20 border-y border-espresso/20">
+        {faqs.map((faq) => (
+            <details class="group py-7">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-xl sm:text-2xl">
+                    {faq.question}
+                    <span class="text-2xl text-taupe transition group-open:rotate-45">
+                        +
+                    </span>
+                </summary>
+                <p class="mt-5 max-w-[720px] text-sm leading-7 text-espresso/65">
+                    {faq.answer}
+                </p>
+            </details>
+        ))}
+    </div>
+</section>

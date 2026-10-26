@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PortfolioHero from "../components/portofolio/PortfolioHero.astro";
+import Gallery from "../components/portofolio/Gallery.astro";
+import FeaturedStory from "../components/portofolio/FeaturedStory.astro";
+import PersonalNote from "../components/portofolio/PersonalNote.astro";
+import Testimonials from "../components/portofolio/Testimonials.astro";
+import ContactSection from "../components/portofolio/ContactSection.astro";
+---
+
+<BaseLayout title="Nresnani — Portofolio & Kontak" activeItem="portfolio">
+    <PortfolioHero />
+    <Gallery />
+    <FeaturedStory />
+    <PersonalNote />
+    <Testimonials />
+    <ContactSection />
+</BaseLayout>

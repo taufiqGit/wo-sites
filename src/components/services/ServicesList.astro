@@ -1,0 +1,112 @@
+---
+const services = [
+    {
+        number: "01 — PERENCANAAN PERNIKAHAN PENUH",
+        title: "Dari visi menjadi perayaan.",
+        body: "Untuk pasangan yang ingin mitra terpercaya sepanjang perjalanan. Kami membentuk visimu, memandu keputusan penting, mengoordinasikan vendor, dan mengawasi setiap bagian berjalan.",
+        items: [
+            "Bimbingan perencanaan",
+            "Koordinasi anggaran dan vendor",
+            "Linimasa dan logistik acara",
+            "Pengawasan hari pernikahan",
+        ],
+        cta: "Tanya tentang perencanaan penuh",
+        image: "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85",
+        alt: "Upacara pernikahan dengan bunga putih yang elegan",
+        offset: false,
+    },
+    {
+        number: "02 — DESAIN & STYLING",
+        title: "Estetika yang khas.",
+        body: "Untuk pasangan yang ingin perayaan dengan identitas visual yang jelas. Kami menyatukan bunga, tekstur, warna, stationery, dan dekorasi dengan penuh niat.",
+        items: [
+            "Konsep desain dan mood board",
+            "Arah palet warna dan styling",
+            "Perencanaan dekorasi dan bunga",
+            "Koordinasi styling di lokasi",
+        ],
+        cta: "Jelajahi desain pernikahan",
+        image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85",
+        alt: "Meja linen ivory berlapis dengan lilin",
+        offset: true,
+    },
+    {
+        number: "03 — KOORDINASI HARI PERNIKAHAN",
+        title: "Setiap momen di tempatnya.",
+        body: "Untuk pasangan yang sudah merencanakan sebagian besar perjalanannya dan ingin tim berpengalaman mengoordinasikan perayaannya.",
+        items: [
+            "Linimasa akhir dan konfirmasi",
+            "Pengawasan vendor dan persiapan",
+            "Koordinasi jadwal",
+            "Penyelesaian masalah hari-H",
+        ],
+        cta: "Tanya tentang koordinasi",
+        image: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=900&q=85",
+        alt: "Detail resepsi disiapkan sebelum tamu datang",
+        offset: false,
+    },
+];
+---
+
+<section id="services-list" class="bg-[#ebe2d7] px-8 py-20 sm:py-28 lg:px-16">
+    <div class="mx-auto max-w-[1280px]">
+        <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+            <div>
+                <p class="mb-4 text-[10px] uppercase tracking-[.3em] text-taupe">
+                    Cara bekerja bersama
+                </p>
+                <h2 class="font-serif text-4xl leading-[1.02] tracking-tight sm:text-5xl lg:text-[68px]">
+                    Pengalaman perencanaan
+                    <br />
+                    <i>yang dibuat untukmu.</i>
+                </h2>
+            </div>
+            <p class="max-w-[285px] text-sm leading-7 text-espresso/60">
+                Bimbingan yang penuh perhatian, arahan kreatif, dan koordinasi
+                yang tenang dari awal hingga akhir.
+            </p>
+        </div>
+
+        <div class="mt-16 grid gap-7 lg:grid-cols-3">
+            {services.map((service) => (
+                <article
+                    class:list={[
+                        "group rounded bg-ivory p-4 shadow-card transition hover:-translate-y-2",
+                        { "lg:mt-12": service.offset },
+                    ]}
+                >
+                    <div class="h-[270px] overflow-hidden rounded">
+                        <img
+                            src={service.image}
+                            alt={service.alt}
+                            class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="px-3 pb-5 pt-7">
+                        <p class="text-[10px] tracking-[.22em] text-taupe">
+                            {service.number}
+                        </p>
+                        <h3 class="mt-3 font-serif text-3xl">
+                            {service.title}
+                        </h3>
+                        <p class="mt-4 text-sm leading-7 text-espresso/65">
+                            {service.body}
+                        </p>
+                        <ul class="mt-6 space-y-2 text-sm text-espresso/70">
+                            {service.items.map((item) => (
+                                <li>— {item}</li>
+                            ))}
+                        </ul>
+                        <a
+                            href="/portofolio/#contact"
+                            class="mt-7 inline-flex items-center gap-4 border-b border-espresso/35 pb-2 text-[10px] uppercase tracking-[.22em]"
+                        >
+                            {service.cta} <span>→</span>
+                        </a>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </div>
+</section>

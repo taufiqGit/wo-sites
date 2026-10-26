@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServicesHero from "../components/services/ServicesHero.astro";
+import ServicesList from "../components/services/ServicesList.astro";
+import Process from "../components/services/Process.astro";
+import WeddingTypes from "../components/services/WeddingTypes.astro";
+import Faq from "../components/services/Faq.astro";
+import ContactCta from "../components/shared/ContactCta.astro";
+---
+
+<BaseLayout title="Nresnani — Layanan" activeItem="services">
+    <ServicesHero />
+    <ServicesList />
+    <Process />
+    <WeddingTypes />
+    <Faq />
+    <ContactCta
+        eyebrow="Mulai percakapan"
+        titleLine1="Mari ciptakan sesuatu"
+        titleLine2="yang bermakna."
+        body="Ceritakan sedikit tentang perayaanmu. Kami akan memulai dengan percakapan tentang visimu dan pengalaman yang kamu cari."
+        ctaHref="/portofolio/#contact"
+        ctaLabel="Mulai pertanyaan"
+    />
+</BaseLayout>

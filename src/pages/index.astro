@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/home/Hero.astro";
+import Story from "../components/home/Story.astro";
+import ServicesPreview from "../components/home/ServicesPreview.astro";
+import PortfolioPreview from "../components/home/PortfolioPreview.astro";
+import Philosophy from "../components/home/Philosophy.astro";
+import ContactCta from "../components/shared/ContactCta.astro";
+---
+
+<BaseLayout
+    title="Nresnani — Perencanaan Pernikahan Kontemporer"
+    activeItem="home"
+>
+    <Hero />
+    <Story />
+    <ServicesPreview />
+    <PortfolioPreview />
+    <Philosophy />
+    <ContactCta
+        eyebrow="Mulai percakapan"
+        titleLine1="Ceritamu bisa menjadi"
+        titleLine2="favorit berikutnya."
+        body="Ceritakan apa yang kamu bayangkan. Kami ingin mendengar hal-hal yang penting bagimu."
+        ctaHref="/portofolio/#contact"
+        ctaLabel="Hubungi kami"
+    />
+</BaseLayout>

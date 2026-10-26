@@ -1,0 +1,52 @@
+---
+const principles = [
+    {
+        number: "01",
+        title: "Pribadi sejak awal",
+        body: "Setiap pernikahan dimulai dari ceritamu.",
+    },
+    {
+        number: "02",
+        title: "Penuh perhatian di setiap detail",
+        body: "Setiap elemen punya tujuannya.",
+    },
+    {
+        number: "03",
+        title: "Mulus sejak desain",
+        body: "Proses yang penuh pertimbangan dari awal hingga akhir.",
+    },
+];
+---
+
+<section class="bg-espresso px-8 py-20 text-ivory sm:py-28 lg:px-16">
+    <div class="mx-auto grid max-w-[1120px] gap-16 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+        <div>
+            <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-champagne">
+                Filosofi kami
+            </p>
+            <h2 class="font-serif text-4xl leading-[1.02] sm:text-5xl lg:text-[68px]">
+                Keindahan ada
+                <br />
+                <i>di setiap detail.</i>
+            </h2>
+            <p class="mt-8 max-w-[410px] text-sm leading-7 text-ivory/65">
+                Perayaan yang indah dibangun dari keputusan yang penuh
+                pertimbangan, kemitraan yang saling percaya, dan pemahaman yang
+                jelas tentang hal yang paling penting bagimu.
+            </p>
+        </div>
+        <div class="grid gap-8 border-l border-ivory/20 pl-8">
+            {principles.map((item) => (
+                <div>
+                    <span class="font-serif text-3xl italic">
+                        {item.number}
+                    </span>
+                    <p class="mt-2 font-serif text-2xl sm:text-3xl">
+                        {item.title}
+                    </p>
+                    <p class="mt-2 text-sm text-ivory/55">{item.body}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

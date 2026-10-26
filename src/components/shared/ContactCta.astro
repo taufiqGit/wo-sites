@@ -1,0 +1,37 @@
+---
+interface Props {
+    eyebrow: string;
+    titleLine1: string;
+    titleLine2: string;
+    body: string;
+    ctaHref: string;
+    ctaLabel: string;
+}
+const { eyebrow, titleLine1, titleLine2, body, ctaHref, ctaLabel } =
+    Astro.props;
+---
+
+<section class="relative overflow-hidden bg-[#d1bca5] px-8 py-24 sm:py-32 lg:px-16">
+    <div class="absolute -right-20 -top-28 h-96 w-96 rounded-full bg-ivory/35 blur-3xl"></div>
+    <div class="relative mx-auto flex max-w-[1280px] flex-col justify-between gap-12 lg:flex-row lg:items-end">
+        <div>
+            <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-espresso/60">
+                {eyebrow}
+            </p>
+            <h2 class="max-w-[710px] font-serif text-4xl leading-[1.02] tracking-tight sm:text-5xl lg:text-[78px]">
+                {titleLine1}
+                <br />
+                <i>{titleLine2}</i>
+            </h2>
+        </div>
+        <div class="max-w-[310px]">
+            <p class="text-sm leading-7 text-espresso/70">{body}</p>
+            <a
+                href={ctaHref}
+                class="mt-7 inline-flex items-center gap-5 rounded-full bg-espresso px-7 py-4 text-[10px] uppercase tracking-[.23em] text-ivory shadow-card transition-transform hover:-translate-y-1"
+            >
+                {ctaLabel} <span class="text-base">↗</span>
+            </a>
+        </div>
+    </div>
+</section>

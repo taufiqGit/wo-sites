@@ -1,0 +1,20 @@
+---
+import PageHero from "../shared/PageHero.astro";
+import HeroImage from "../shared/HeroImage.astro";
+---
+
+<PageHero
+    eyebrow="Pengalaman Nresnani"
+    titleHtml={`Visimu,<br /><i>ditewujudkan</i> dengan<br />penuh ketelitian.`}
+    body="Tidak ada dua cerita cinta yang sama, dan tidak ada dua pernikahan yang harus terasa sama. Pendekatan kami dimulai dengan memahami hal yang paling penting bagimu."
+    ctaHref="#services-list"
+    ctaLabel="Temukan pengalaman perencanaanmu"
+>
+    <HeroImage
+        slot="image"
+        image="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=85"
+        alt="Resepsi pernikahan mewah dengan lilin dan bunga ivory"
+        caption="Setiap detail, kami jaga."
+        subcaption="Merencanakan dengan niat"
+    />
+</PageHero>

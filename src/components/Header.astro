@@ -1,0 +1,82 @@
+---
+interface Props {
+    activeItem?: "home" | "services" | "portfolio";
+}
+
+const { activeItem = "home" } = Astro.props;
+
+const links = [
+    { href: "/#story", label: "Cerita", key: "story" },
+    { href: "/services/", label: "Layanan", key: "services" },
+    { href: "/portofolio/", label: "Portofolio", key: "portfolio" },
+];
+---
+
+<header class="absolute left-0 right-0 top-0 z-20 px-6 py-6 sm:px-10 sm:py-8 lg:px-16">
+    <nav class="mx-auto flex max-w-[1280px] items-center justify-between">
+        <a
+            href="/"
+            class="font-serif text-[26px] tracking-[.08em] sm:text-[30px]"
+        >
+            Nresnani
+        </a>
+
+        <div class="hidden items-center gap-10 text-[10px] font-medium uppercase tracking-[.24em] md:flex">
+            {links.map((link) => (
+                <a
+                    href={link.href}
+                    class:list={[
+                        "transition-opacity hover:opacity-50",
+                        { "opacity-50": activeItem === link.key },
+                    ]}
+                >
+                    {link.label}
+                </a>
+            ))}
+            <a
+                href="/portofolio/#contact"
+                class="rounded-full border border-espresso/30 px-5 py-3 transition-colors hover:bg-espresso hover:text-ivory"
+            >
+                Hubungi kami
+            </a>
+        </div>
+
+        <button
+            id="mobile-menu-button"
+            class="rounded-full border border-espresso/20 p-3 md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+            <iconify-icon icon="lucide:menu" class="text-lg"></iconify-icon>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden px-2 pt-6 md:hidden">
+        <div class="flex flex-col gap-6 rounded-[4px] bg-ivory p-7 shadow-card">
+            {links.map((link) => (
+                <a
+                    href={link.href}
+                    class="text-[11px] font-medium uppercase tracking-[.24em]"
+                >
+                    {link.label}
+                </a>
+            ))}
+            <a
+                href="/portofolio/#contact"
+                class="rounded-full border border-espresso/30 px-5 py-3 text-center text-[11px] font-medium uppercase tracking-[.24em]"
+            >
+                Hubungi kami
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const button = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+    button?.addEventListener("click", () => {
+        const isOpen = !menu?.classList.toggle("hidden");
+        button.setAttribute("aria-expanded", String(isOpen));
+    });
+</script>

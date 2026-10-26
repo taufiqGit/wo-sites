@@ -1,0 +1,181 @@
+---
+---
+
+<section id="contact" class="bg-[#ebe2d7] px-8 py-20 sm:py-32 lg:px-16">
+    <div class="mx-auto grid max-w-[1280px] gap-16 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+        <div>
+            <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-taupe">
+                Mulai percakapan
+            </p>
+            <h2 class="font-serif text-4xl leading-[1.02] tracking-tight sm:text-5xl lg:text-[68px]">
+                Kami senang
+                <br />
+                <i>mendengar ceritamu.</i>
+            </h2>
+            <p class="mt-8 max-w-[360px] text-sm leading-7 text-espresso/65">
+                Ceritakan perayaan yang kamu bayangkan. Kami akan memahami hal
+                yang penting bagimu dan mengeksplorasi cara membuatnya bermakna.
+            </p>
+            <div class="mt-10 space-y-3 text-[10px] uppercase tracking-[.18em] text-taupe">
+                <p>Email · hello@nresnani.com</p>
+                <p>Instagram · @nresnani</p>
+                <p>WhatsApp · Siap menerima pertanyaan</p>
+            </div>
+        </div>
+
+        <form class="rounded-[4px] bg-ivory p-7 shadow-card lg:p-10">
+            <div class="grid gap-6 md:grid-cols-2">
+                <label class="text-[10px] uppercase tracking-[.18em]">
+                    Nama kamu
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Nama kamu"
+                        class="mt-3 w-full border-b border-espresso/25 bg-transparent px-0 py-3 text-sm outline-none placeholder:text-espresso/35 focus:border-espresso"
+                    />
+                </label>
+                <label class="text-[10px] uppercase tracking-[.18em]">
+                    Alamat email
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="kamu@contoh.com"
+                        class="mt-3 w-full border-b border-espresso/25 bg-transparent px-0 py-3 text-sm outline-none placeholder:text-espresso/35 focus:border-espresso"
+                    />
+                </label>
+                <label class="text-[10px] uppercase tracking-[.18em]">
+                    Tanggal pernikahan
+                    <input
+                        type="text"
+                        name="date"
+                        placeholder="Jika sudah ada"
+                        class="mt-3 w-full border-b border-espresso/25 bg-transparent px-0 py-3 text-sm outline-none placeholder:text-espresso/35 focus:border-espresso"
+                    />
+                </label>
+                <label class="text-[10px] uppercase tracking-[.18em]">
+                    Lokasi pernikahan
+                    <input
+                        type="text"
+                        name="location"
+                        placeholder="Kota atau venue"
+                        class="mt-3 w-full border-b border-espresso/25 bg-transparent px-0 py-3 text-sm outline-none placeholder:text-espresso/35 focus:border-espresso"
+                    />
+                </label>
+            </div>
+
+            <fieldset class="mt-9">
+                <legend class="text-[10px] uppercase tracking-[.18em]">
+                    Jenis perayaan
+                </legend>
+                <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="type"
+                            value="classic"
+                            class="accent-espresso"
+                        />{" "}
+                        Pernikahan klasik
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="type"
+                            value="traditional"
+                            class="accent-espresso"
+                        />{" "}
+                        Tradisional atau budaya
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="type"
+                            value="intimate"
+                            class="accent-espresso"
+                        />{" "}
+                        Pernikahan intim
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="type"
+                            value="destination"
+                            class="accent-espresso"
+                        />{" "}
+                        Pernikahan destinasi
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="type"
+                            value="other"
+                            class="accent-espresso"
+                        />{" "}
+                        Perayaan lainnya
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset class="mt-8">
+                <legend class="text-[10px] uppercase tracking-[.18em]">
+                    Layanan yang diminati
+                </legend>
+                <div class="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="service"
+                            value="full-planning"
+                            class="accent-espresso"
+                        />{" "}
+                        Perencanaan pernikahan penuh
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="service"
+                            value="design-styling"
+                            class="accent-espresso"
+                        />{" "}
+                        Desain &amp; styling
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="service"
+                            value="day-coordination"
+                            class="accent-espresso"
+                        />{" "}
+                        Koordinasi hari-H
+                    </label>
+                    <label class="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            name="service"
+                            value="not-sure"
+                            class="accent-espresso"
+                        />{" "}
+                        Belum yakin
+                    </label>
+                </div>
+            </fieldset>
+
+            <label class="mt-8 block text-[10px] uppercase tracking-[.18em]">
+                Ceritakan visimu
+                <textarea
+                    name="vision"
+                    rows="4"
+                    placeholder="Apa yang kamu bayangkan?"
+                    class="mt-3 w-full resize-none border-b border-espresso/25 bg-transparent px-0 py-3 text-sm outline-none placeholder:text-espresso/35 focus:border-espresso"
+                ></textarea>
+            </label>
+
+            <button
+                type="submit"
+                class="mt-8 inline-flex items-center gap-5 rounded-full bg-espresso px-7 py-4 text-[10px] uppercase tracking-[.23em] text-ivory shadow-card transition-all hover:-translate-y-1"
+            >
+                Kirim pertanyaan <span class="text-base">↗</span>
+            </button>
+        </form>
+    </div>
+</section>

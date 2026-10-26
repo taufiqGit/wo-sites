@@ -1,0 +1,53 @@
+---
+const steps = [
+    {
+        number: "01",
+        title: "Mendengar & Menemukan",
+        body: "Kami mulai dengan mengenal cerita, prioritas, tradisi, dan visimu.",
+    },
+    {
+        number: "02",
+        title: "Merencanakan & Mengurasi",
+        body: "Kami menyusun rencana yang penuh pertimbangan dan memandu keputusan di sekitar hal yang paling penting.",
+    },
+    {
+        number: "03",
+        title: "Mengoordinasikan & Mewujudkan",
+        body: "Kami menyatukan orang, detail, dan elemen desain dalam tahap persiapan.",
+    },
+    {
+        number: "04",
+        title: "Merayakan & Mengenang",
+        body: "Kamu tetap hadir bersama orang-orang yang kamu cintai sementara pernikahanmu berlangsung.",
+    },
+];
+---
+
+<section
+    id="process"
+    class="mx-auto max-w-[1120px] px-8 py-20 sm:py-32 lg:px-0"
+>
+    <div class="mb-16 max-w-[650px]">
+        <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-taupe">
+            Prosesnya
+        </p>
+        <h2 class="font-serif text-4xl leading-[1.04] tracking-tight sm:text-5xl lg:text-[68px]">
+            Perjalanan yang penuh
+            <br />
+            <i>pertimbangan, selangkah demi selangkah.</i>
+        </h2>
+    </div>
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {steps.map((step) => (
+            <div class="border-t border-espresso/25 pt-6">
+                <span class="font-serif text-3xl italic text-champagne">
+                    {step.number}
+                </span>
+                <h3 class="mt-5 font-serif text-2xl">{step.title}</h3>
+                <p class="mt-4 text-sm leading-7 text-espresso/65">
+                    {step.body}
+                </p>
+            </div>
+        ))}
+    </div>
+</section>
