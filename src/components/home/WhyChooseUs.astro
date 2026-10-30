@@ -1,0 +1,46 @@
+---
+const reasons = [
+  {
+    title: 'Manajemen Anggaran Transparan',
+    body: 'Kami membantu Anda mengoptimalkan anggaran tanpa ada biaya tersembunyi.',
+  },
+  {
+    title: 'Perhatian pada Detail',
+    body: 'Dari tata pencahayaan hingga urutan protokol, setiap detail kecil kami perhatikan dengan cermat.',
+  },
+  {
+    title: 'Tim Berpengalaman & Komunikatif',
+    body: 'Tim kami yang ramah dan sigap selalu siap merespons kebutuhan Anda kapan saja.',
+  },
+  {
+    title: 'Jaringan Mitra Luas',
+    body: 'Akses mudah ke berbagai pilihan vendor terkemuka dengan penawaran terbaik.',
+  },
+];
+---
+
+<section class="bg-espresso px-8 py-20 text-ivory sm:py-28 lg:px-16">
+  <div class="mx-auto grid max-w-[1120px] gap-16 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+    <div>
+      <p class="mb-5 text-[10px] uppercase tracking-[.3em] text-champagne">Kenapa memilih kami</p>
+      <h2 class="font-serif text-4xl leading-[1.02] sm:text-5xl lg:text-[68px]">
+        Pernikahan tenang<br /><i>dimulai dari sini.</i>
+      </h2>
+      <p class="mt-8 max-w-[410px] text-sm leading-7 text-ivory/65">
+        Kami mengambil alih seluruh kerumitan perencanaan, sehingga Anda dan keluarga dapat fokus
+        menikmati setiap momen berharga.
+      </p>
+    </div>
+    <div class="grid gap-8 border-l border-ivory/20 pl-8">
+      {
+        reasons.map((reason, index) => (
+          <div>
+            <span class="font-serif text-3xl italic">{String(index + 1).padStart(2, '0')}</span>
+            <p class="mt-2 font-serif text-2xl sm:text-3xl">{reason.title}</p>
+            <p class="mt-2 text-sm text-ivory/55">{reason.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

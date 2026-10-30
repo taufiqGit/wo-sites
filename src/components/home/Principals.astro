@@ -1,0 +1,48 @@
+---
+const principals = [
+  {
+    name: 'Nurkaririn',
+    role: 'Principal & Lead Designer',
+    bio: 'Berlatar pendidikan Sastra Indonesia Universitas Diponegoro (UNDIP), kepekaannya terhadap bahasa, budaya, dan estetika visual membentuk fondasi kuat dalam setiap karya dekorasinya. Berpengalaman lebih dari dua dekade berkikrah di industri dekorasi, ia dikenal memiliki ketelitian tinggi dalam memadukan keindahan visual dan cerita emosional — termasuk dipercaya mengeksekusi dekorasi pernikahan bernuansa megah di salah satu hotel berbintang lima.',
+    image:
+      'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=85',
+  },
+  {
+    name: 'Mardhiyah',
+    role: 'Co-Principal & Managing Director',
+    bio: 'Lulusan Fakultas Ekonomika dan Bisnis Universitas Diponegoro (UNDIP), kombinasi keahlian finansial dan kepedulian sosialnya menjadikan pilar utama dalam kepemimpinan bisnis. Berlatar belakang sebagai pendidik, ia membawa ketelitian, transparansi, dan pendekatan yang humanis dalam mengelola operasional dan keuangan — terbukti melalui perannya sebagai narasumber di lebih dari 10 kegiatan masyarakat tentang pemberdayaan perempuan dan pendidikan anak.',
+    image:
+      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85',
+  },
+];
+---
+
+<section id="principals" class="bg-[#ebe2d7] px-8 py-20 sm:py-28 lg:px-16">
+  <div class="mx-auto max-w-[1280px]">
+    <div class="mb-16 max-w-[650px]">
+      <p class="mb-4 text-[10px] uppercase tracking-[.3em] text-taupe">Siapa kami</p>
+      <h2 class="font-serif text-4xl leading-[1.04] tracking-tight sm:text-5xl lg:text-[68px]">
+        Di balik <i>OASIS.</i>
+      </h2>
+    </div>
+    <div class="grid gap-12 md:grid-cols-2 lg:gap-16">
+      {
+        principals.map((person) => (
+          <article class="group">
+            <div class="h-[420px] overflow-hidden rounded-t-[150px] rounded-b-[12px] shadow-card">
+              <img
+                src={person.image}
+                alt={`Foto ${person.name}`}
+                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="mt-8 font-serif text-3xl">{person.name}</h3>
+            <p class="mt-2 text-[10px] uppercase tracking-[.22em] text-taupe">{person.role}</p>
+            <p class="mt-5 text-sm leading-7 text-espresso/70">{person.bio}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
